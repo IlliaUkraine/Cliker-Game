@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clicker Game</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Clicker Game</h1>
+        <form method="post">
+            <button type="submit" name="click" class="click-button">Click me!</button>
+            <button type="submit" name="upgrade" class="upgrade-button">Upgrade click ({{ upgrade_cost }} clicks)</button>
+            <button type="submit" name="reset" class="reset-button">Reset</button>
+        </form>
+        <p class="click-count">Click count: {{ click_count }}</p>
+        <p class="click-power">Click power: {{ click_power }}</p>
+    </div>
+</body>
+</html>
